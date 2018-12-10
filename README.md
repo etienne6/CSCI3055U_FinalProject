@@ -4,22 +4,22 @@
 - _etienne.caronan@uoit.net_
 
 ## About the language
-_History_
+**History**
 
-In July 2011, JetBrains unveiled Kotlin; a language they have been developing for a year.
-And on August 2011, JetBrains published a blog post,
-"Why JetBrains needs Kotlin", detailing their reasons behind creating Kotlin. Here are the main points:
+In July 2011, JetBrains unveiled Kotlin; a language they have been developing for a year. And on August 2011, JetBrains published a blog post, "Why JetBrains needs Kotlin", detailing their reasons behind creating Kotlin.
 
-- _To increase their (JetBrains) productivity_
+Here are the main points:
+
+_To increase their (JetBrains) productivity_
 > Back then, JetBrains team were writing all of their IntelliJ-based IDEs almost entirely in Java. It took a lot of time to compile with javac. They wanted to increase productivity by switching to a more expressive language.
 
-- _To drive sales of IntelliJ IDEA_
+**_To drive sales of IntelliJ IDEA_**
 >They wanted the enterprise development frameworks and tools for Kotlin to be the part of IntelliJ IDEA Ultimate (commercial version) thereby increasing its sales.
 
 - _Drive company's business by keeping trust_
 > JetBrains is trusted by a lot of professional developers. They wanted to drive company's business as well as attract more people to their approach of developing tools by increasing community awareness of JetBrains and maintaining the trust.
 
-_Some interesting features_
+**Some interesting features**
 
 Kotlin is a statically typed language. Here are some of the important features of Kotlin:
 
