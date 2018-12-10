@@ -41,9 +41,9 @@ In fact, Android team announced Kotlin a first class language for developing And
 >Kotlin is developed by JetBrains, a company renowned for creating development tools for professionals. No wonder, it is tool-friendly.      
 You can choose any Java IDE to run Kotlin or build it from the command line.
 
-## About the syntax
+# **About the syntax**
 
-**Hello world**
+### Hello world
 
 ```kotlin
 fun main(args : Array<String>) {
@@ -52,7 +52,7 @@ fun main(args : Array<String>) {
 ```
 Just like Java, the entry point of Kotlin's compiler is the _main_ function.
 
-**Variable Declaration**
+### Variable Declaration
 
 Kotlin is a _statically_ typed language, meaning the type of the variable
 must be known by compile time.
@@ -81,11 +81,11 @@ Here's some example of errors:
 var age: Int //declaring age as type Int
 age = "20"  //Error: Assigning a type String to an Int variable
 var name
-//Error: variable must be initialized oro have type declared
+//Error: variable must be initialized or have type declared
 name = "Etienne"
 ```
 
-**Val vs Var**
+#### _Val vs Var_
 
 We can declare a variable in Kotlin using either *val* or *var*. The difference
 between the two is that *val* is an immutable value while *var* isn't.
@@ -97,6 +97,7 @@ var name = "Etienne"
 name = "Eric" //this is okay
 ```
 
+## Flow Control
 ## About the tools
 
 > _Describe the compiler or interpreter needed_.
