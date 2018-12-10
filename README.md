@@ -20,7 +20,7 @@ _Here are the main points_:
 
 **Some interesting features**
 
-Kotlin is a _statically_ typed language. Here are some of the important features of Kotlin:
+Here are some of the important features of Kotlin:
 
 **_Open source_**
 
@@ -43,14 +43,58 @@ You can choose any Java IDE to run Kotlin or build it from the command line.
 
 ## About the syntax
 
-> _give some code snippet of the language_
+**Hello world**
 
-*Let form*
+```kotlin
+fun main(args : Array<String>) {
+    println("Hello, world!")
+}
+```
+Just like Java, the entry point of Kotlin's compiler is the _main_ function.
 
-```clojure
-(let [x 10
-      y 20]
-  (+ x y))
+**Variable Declaration**
+
+Kotlin is a _statically_ typed language, meaning the type of the variable
+must be known by compile time.
+
+Here is an example of variable declaration:
+
+```kotlin
+var age = 20  //Int data type
+var name = "Etienne" //String data type
+```
+Kotlin supports type inferencing, meaning we do not have to state the data
+type of the variable when we declare it.
+
+However, if we want to explicitly state the data type, here's how:
+
+```kotlin
+var age: Int //declaring age as type Int
+age = 20  //assigning value
+var name: String //declaring name as type String
+name = "Etienne" //assigning value
+var class: String = "CSCI 3055U" //Shorter way of doing it
+```
+
+Here's some example of errors:
+```kotlin
+var age: Int //declaring age as type Int
+age = "20"  //Error: Assigning a type String to an Int variable
+var name
+//Error: variable must be initialized oro have type declared
+name = "Etienne"
+```
+
+**Val vs Var**
+
+We can declare a variable in Kotlin using either *val* or *var*. The difference
+between the two is that *val* is an immutable value while *var* isn't.
+
+```kotlin
+val age = 20
+age = 20 //Error
+var name = "Etienne"
+name = "Eric" //this is okay
 ```
 
 ## About the tools
