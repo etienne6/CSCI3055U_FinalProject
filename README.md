@@ -85,7 +85,7 @@ var name
 name = "Etienne"
 ```
 
-*_Val vs Var_*
+**_Val vs Var_**
 
 We can declare a variable in Kotlin using either *val* or *var*. The difference
 between the two is that *val* is an immutable value while *var* isn't.
