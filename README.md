@@ -23,21 +23,20 @@ _Some interesting features_
 
 Kotlin is a statically typed language. Here are some of the important features of Kotlin:
 
-    - _Open source_
-    Kotlin is distributed under Apache License, Version 2.0. The Kompiler (Kotlin compiler), IntelliJ IDEA plugin, enhancements to basic Java libraries and build tools all are open source.
+- _Open source_
+Kotlin is distributed under Apache License, Version 2.0. The Kompiler (Kotlin compiler), IntelliJ IDEA plugin, enhancements to basic Java libraries and build tools all are open source.
 
-    - _Interoperable with Java and Android_
-    It is 100% interoperable with Java and Android. This means all your current Java/Android code works seamlessly with Kotlin. For more information, visit: Mixing Java and Kotlin in One Project.
+- _Interoperable with Java and Android_
+It is 100% interoperable with Java and Android. This means all your current Java/Android code works seamlessly with Kotlin. For more information, visit: Mixing Java and Kotlin in One Project.
 
-    In fact, Android team announced Kotlin a first class language for developing Android apps.  In addition to that, it allows you to compile quite a few Kotlin projects to JavaScript modules.
+In fact, Android team announced Kotlin a first class language for developing Android apps.  In addition to that, it allows you to compile quite a few Kotlin projects to JavaScript modules.
 
-    - _Concise and Expressive_
-    Rough estimation indicates that, using Kotlin allows you to cut off the lines of code by approximately 40% (compared to Java).
+- _Concise and Expressive_
+Rough estimation indicates that, using Kotlin allows you to cut off the lines of code by approximately 40% (compared to Java).
 
-    - _Tool-friendly_
-      Kotlin is developed by JetBrains, a company renowned for creating development tools for professionals. No wonder, it is tool-friendly.
-
-      You can choose any Java IDE to run Kotlin or build it from the command line.
+- _Tool-friendly_
+Kotlin is developed by JetBrains, a company renowned for creating development tools for professionals. No wonder, it is tool-friendly.      
+You can choose any Java IDE to run Kotlin or build it from the command line.
 
 ## About the syntax
 
