@@ -97,7 +97,59 @@ var name = "Etienne"
 name = "Eric" //this is okay
 ```
 
-## Flow Control
+### Flow Control
+
+In this section I will detail the different ways we can control the flow of our program.
+
+**if expression**
+
+There is a traditional use of the if expression, syntatically it looks the same
+as Java:
+
+```kotlin
+val mark = 89
+if (mark < 50) {
+    println("Failed class!")
+} else {
+    println("Passed class!")
+}
+//outputs "Passed class!"
+```
+Please note that, the else block is optional.
+
+
+With Kotlin there is another way we can use the if/else block:
+```kotlin
+val mark = 89
+val result = if (mark < 50) {
+    "Failed class!"
+} else {
+    "Passed class!"
+}
+println(result) //outputs "Passed class!"
+```
+You can see with this code block the value assigned to result is the executed line in the else block. With Kotlin, the if/else blocks can return values. The data type assigned is inferred.
+
+Here's another example:
+```kotlin
+val mark = 89
+val result = if (mark < 50) {  
+    print("We are so sorry that")
+    print(",you ")
+    "Failed class!"
+} else {
+    print("Congratulations")
+    print(" you have ")
+    "Passed class!"
+}
+print(result)
+```
+The output of this code would be:
+```kotlin
+Congratulations you have Passed class!
+```
+Another thing to take note of on if expressions is that, the last line
+of the the executed if/else block is returned.
 ## About the tools
 
 > _Describe the compiler or interpreter needed_.
