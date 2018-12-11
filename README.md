@@ -468,14 +468,94 @@ In this snippet of code, I defined an _isOdd_ function which checks if a number 
 ## About the tools
 
 * Kotlin has a compiler called **_kotlinc_**, which integrates parts of JVM (_Java Virtual Machine_).
+* Kotlin's compiler can also target JVM, JS and Native.
 * JDK is required to run programs compiled by Kotlin. Kotlin is compatible with JDK 1.6+
 * Even though Kotlin is an independent language, it requires on Java's standard library and development kit.
 * Since JetBrains developed kotlin, their IDE **_intelliJ_** contains all such tools required: Build tools(optional), JDK and JVM.
 
 ## About the standard library
+> Here are examples of some features of Kotlin's standard lirary. Since it is a **huge** library, by no means this is an exhaustive list. We'll also only focus on it's syntax in Kotlin.
 
-> _Give some examples of the functions and data structures
-> offered by the standard library_.
+**kotlin.collections**
+>Contains all the collection types suchs as, as Iterable, Collection, List, Set, Map and related top-level and extension functions.
+
+**kotlin.collections/MutableList**
+> Generic ordered collection of elements that supports adding and removing elements.
+```kotlin
+interface MutableList<E> : List<E>, MutableCollection<E>
+```
+Where E is the element type of the list. There can be only one type for the list.
+
+***functions***
+
+_add_
+>Adds specified values to the end of the list.
+```kotlin
+abstract fun add(element: E): Boolean
+```
+If we want to specify the index to put the value at:
+```kotlin
+abstract fun add(index: Int, element: E)
+```
+_remove_
+>Removes a specified value, if it appears in the list.
+```kotlin
+abstract fun remove(element: E): Boolean
+```
+_clear_
+>Removes all the elements of the specified collection, returns an empty list.
+```kotlin
+abstract fun removeAll(elements: Collection<E>): Boolean
+```
+_binarySearch_
+>  Searches the list given the provided element using the Binary Search algorithm. The list is expected to be sorted according to the comparator operator. If this argument is not supplied the results will be undefined.
+Returns the index of the element.
+```kotlin
+fun <T> List<T>.binarySearch(
+    element: T,
+    comparator: Comparator<in T>,
+    fromIndex: Int = 0,
+    toIndex: Int = size
+): Int
+```
+_sort_
+> returns a list sorted in its natural order.
+```kotlin
+fun <T> MutableList<T>.sort()
+```
+
+Sample Code
+```Kotlin
+fun main(args: Array<String>) {
+    var numbers: MutableList<Int> = mutableListOf(10, 7, 98)
+
+    numbers.add(1)
+    println(numbers)
+
+    numbers.sort()
+    println(numbers)
+
+    numbers.remove(7)
+    //we sort the list before using binarySearch
+    numbers.sort()
+    numbers.binarySearch(7)
+    println(numbers)
+
+    numbers.clear()
+    println(numbers)
+}
+```
+This results in the output of:
+```kotlin
+[10, 7, 98, 1]
+[1, 7, 10, 98]
+[1, 10, 98]
+[]
+```
+
+
+
+
 
 ## About open source library
 
