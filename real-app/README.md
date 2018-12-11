@@ -1,2 +1,3 @@
-This folder contains the code of a reasonably real application 
-implemented in the language.
+## Android App Development with Kotlin (Specialized Library)
+> In this section I developed an app that calculates the sum of two numbers
+and displays it. Written in Kotlin Syntax

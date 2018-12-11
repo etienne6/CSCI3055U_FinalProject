@@ -554,13 +554,9 @@ This results in the output of:
 ```
 
 
+## Android App Development with Kotlin (Specialized Library)
 
-
-
-## About open source library
-
-> _Describe at least one contribution by the open source
-community written in the language._
+> Please see the real-app folder
 
 # Analysis of the language
 
