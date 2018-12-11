@@ -467,7 +467,10 @@ In this snippet of code, I defined an _isOdd_ function which checks if a number 
 
 ## About the tools
 
-> _Describe the compiler or interpreter needed_.
+* Kotlin has a compiler called **_kotlinc_**, which integrates parts of JVM (_Java Virtual Machine_).
+* JDK is required to run programs compiled by Kotlin. Kotlin is compatible with JDK 1.6+
+* Even though Kotlin is an independent language, it requires on Java's standard library and development kit.
+* Since JetBrains developed kotlin, their IDE **_intelliJ_** contains all such tools required: Build tools(optional), JDK and JVM.
 
 ## About the standard library
 
