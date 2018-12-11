@@ -152,6 +152,7 @@ Another thing to take note of on if expressions is that, the last line
 of the the executed if/else block is returned.
 
 **while loop**
+
 Here is the basic syntax of a while loop in Kotlin:
 ```kotlin
 while (testExpression) {
