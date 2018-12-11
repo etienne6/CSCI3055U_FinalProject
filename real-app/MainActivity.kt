@@ -32,12 +32,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
         var enter2nd: EditText = findViewById<EditText>(R.id.editText4)
         val showsum: TextView = findViewById<TextView>(R.id.textView2)
 
-        // Get the value of the text view.
+        // Get the values
         val sumString = showsum.text.toString()
         val num1st = enter1st.text.toString()
         val num2nd = enter2nd.text.toString()
 
-        // Convert value to a number and increment it
+        // Convert values to number and compute sum
         var sum: Int = Integer.parseInt(num1st) + Integer.parseInt(num2nd)
 
         // Display the new value in the text view.
