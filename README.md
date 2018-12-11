@@ -292,6 +292,51 @@ _Note that the function didn't specify a _return type_, meaning that the functio
 
 **Recursion**
 
+Let's take a look at the _repeateMessage_ function that we implemented awhile ago but this time as a recursive function:
+```kotlin
+fun repeatMessage(message: String, length: Int) {
+    if(length != 0){
+        println(message)
+        return repeatMessage(message, length-1)
+    }
+}
+
+fun main(args: Array<String>) {
+    repeatMessage("Hello World", 5)
+}
+```
+Where its output is:
+```kotlin
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+```
+Another way we can do recursive functions in Kotlin is through _tail recursion_.
+The difference between the recursion we did from the example above is that, with _tail recursion_ the recursive call is done as the last operation of the entire function.
+
+In order to do _tail recursion_ in Kotlin, we have to tell the compiler by using the **_tailrec_** function prefix.
+
+Let us look at our beloved _fibonacci sequence_ function as an example:
+```kotlin
+import java.math.BigInteger
+
+fun main(args: Array<String>) {
+    val n = 100
+    val first = BigInteger("0")
+    val second = BigInteger("1")
+
+    println(fibonacci(n, first, second))
+}
+
+tailrec fun fibonacci(n: Int, a: BigInteger, b: BigInteger): BigInteger {
+    return if (n == 0) a else fibonacci(n-1, b, a+b)
+}
+```
+
+
+
 ## About the tools
 
 > _Describe the compiler or interpreter needed_.
