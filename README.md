@@ -345,7 +345,44 @@ n (the number we will be calculating the fibonacci of), a and b which both takes
 
 With this _tail recursion_, the recursive function _bottoms out_ once n reaches the value of 0. Everytime we iterate the recursive function, we always check if n is equal to 0. If not, we do a recursive call to the _fibonacci_ function passing the values of: decrement of n by 1, b and the sum of a and b.
 
+### OOP (Object Oriented Programming)
 
+In Kotlin, just like Java we can create an object class. But, Kotlin supports both _functional_ and _OOP_. Kotlin supports features such as _higher-order functions_, _function types_ and _lambdas_.
+
+Before we divulge into those features, let us look at a basic example of a class declaration in Kotlin:
+
+```kotlin
+fun main(args: Array<String>) {
+    val person1 = Person("Etienne",20)
+    print(person1.getName() + " is " + person1.getAge() + " years old")
+}
+
+class Person (personName: String, personAge: Int) {
+    private var name: String
+    private var age: Int
+    // constructor
+    init {
+        name = personName
+        age = personAge
+    }
+    fun getName(): String{return name}
+    fun getAge(): Int{return age}
+}
+```
+Where the output is:
+```kotlin
+Etienne is 20 years old
+```
+
+Now, there's quite a bit going on in this block of code, so let us break it down:
+
+1. _class Person_ looks just like a function where we specify its arguments. Unlike a function, it's arguments go into the _init_ block where we initialize the values of the class. In this case, age and name.
+
+2. _getName()_ and _getAge()_ are accessor functions which gets the value of name and age variables of the class.
+
+3. Line 2 of the function is the declaration of instance of the class Person, assigned to the variable person1.
+
+4. Line 3 is an example of doing function calls that belong to a class.
 
 
 ## About the tools
