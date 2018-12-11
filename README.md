@@ -558,7 +558,97 @@ This results in the output of:
 
 > Please see the real-app folder
 
-# Analysis of the language
+## Analysis of the language
 
-> _Organize your report according to the project description
-document_.
+**Kotlin a Hybrid**
+
+Kotlin supports both functional and procedural paradigms.
+
+*functional*
+* Kotlin supports features such as top-level scoping, lambdas and tail recursion as featured in our previous examples.
+
+*procedural*
+* We can see this through top level functions meaning, things such as this is allowed in Kotlin:
+```kotlin
+fun call(){
+    //empty function
+}
+fun person(){
+//makes function call
+ call()
+}
+```
+**Meta-Programming**
+
+During my research I was able to find that Kotlin does indeed support Meta-Programming. Kotlin supports the OOP feature _reflections_. "Reflections is the ability of a computer program to examine, introspect and modify its own structure during runtime."
+
+In order to use this, we have to add Kotlin's reflection API as a dependency.
+```kotlin
+ "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+```
+
+With regards to _macros_ as far to my knowledge Kotlin does not support it.
+
+**Symbol Resolution / Closure**
+
+Lambda expressions or anonymous functions can capture the variables declared in the outer scope. They can also modify its value.
+
+See example:
+```kotlin
+fun main(args: Array<String>) {
+    var number = 10
+    val multiply = { x: Int, y: Int -> number = x * y}
+//function call
+    multiply(1,2)
+    println(number) // Output is 2
+}
+```
+
+**Scoping**
+> Please consider this function:
+```kotlin
+fun main(args: Array<String>) {
+    var num = 99
+    fun b() { num = 100 }
+    fun c() {
+        var num: Int
+        b()
+    }
+    c()
+    print(num)
+}
+```
+The output of this function is:
+```kotlin
+100
+```
+Kotlin supports *lexical* scoping. This is because Kotlin's compiler determines the value of _num_ that we are referring to at compile time. If it supported _dynamic scoping_ the value would have been 100.
+
+**Functional Programming**
+
+Yes, it is a part of Kotlin's standary library. To reiterate, we can see this in our examples such as lambdas. We do not have to import a library of sorts we can just code it straight away!
+
+**The good and the bad**
+
+*Strengths*
+*  One of the main reasons why it was invented, it's not as verbose as Java. It's much faster to write coded in comparison to it.
+*  Interoperable with Java, code compiles in Java bytecode
+*  Many features, supports several programming paradigms: OOP, functional and procedural
+
+*Weaknesses*
+* Fluctuating compilation speed.
+* Not that many resources to learn from, since language is relatively new.
+* No namespaces, making it harder to organize the code.
+* No static modifiers.
+
+## References
+
+All the information I gathered for this repo, I credit to my sources
+[1] https://www.programiz.com/kotlin-programming
+[2] https://kotlinlang.org/docs/reference/basic-syntax.html
+[3] https://medium.com/@agrawalsuneet/higher-order-functions-in-kotlin-3d633a86f3d7
+[4] https://hackernoon.com/how-to-write-your-first-program-in-kotlin-8554cb526158
+[5] https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html -
+[6] https://codelabs.developers.google.com/codelabs/build-your-first-android-app
+[7] https://www.brightec.co.uk/ideas/kotlin-here-so-what
+[8] https://en.wikipedia.org/wiki/Scope_(computer_science)
