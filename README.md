@@ -347,7 +347,7 @@ With this _tail recursion_, the recursive function _bottoms out_ once n reaches 
 
 ### OOP (Object Oriented Programming)
 
-In Kotlin, just like Java we can create an object class. But, Kotlin supports both _functional_ and _OOP_. Kotlin supports features such as _higher-order functions_, _function types_ and _lambdas_.
+In Kotlin, just like Java we can create an object class. But, Kotlin supports both _functional_ and _OOP_. Kotlin supports features such as _higher-order functions_ and _lambdas_.
 
 Before we divulge into those features, let us look at a basic example of a class declaration in Kotlin:
 
@@ -402,6 +402,68 @@ The use of _anonymous functions_ lets us specify the return type of the function
 fun(x: Int, y: Int): Int = x * y
 ```
 It looks exactly like a regular function but we ommit the name.
+
+**Higher Order Functions**
+
+In Kotlin, a function can be passed as a parameter or can be returned from a function, the function which does the same is known as a higher-order function.
+
+Here is an example that I took from one of my references:
+```kotlin
+fun <T> ArrayList<T>.filterOnCondition(condition: (T) -> Boolean): ArrayList<T>{
+    val result = arrayListOf<T>()
+    for (item in this){
+        if (condition(item)){
+            result.add(item)
+        }
+    }
+
+    return result
+}
+```
+There's alot going on in this block of code so let's break it down:
+1. _<T>_ defines the _template type_ that the function operation will be done over.
+2. _Line 1_ ArrayList<T>.filterOnCondition. ArrayList is a Kotlin class object that is part of its standard library. What we're doing here is defining a method for it.
+3. The argument (condition: (T) -> Boolean) defnes an anonymous function that takes in (T) class object and returns a Boolean. This anonymous function is bounded to _condition_
+4. _line 5_ based on the method _condition_, it will add an item to the arrayList result
+
+Here's an example where I define my own condition function used with the _filterOnCondition_ function.
+
+```kotlin
+
+fun <T> ArrayList<T>.filterOnCondition(condition: (T) -> Boolean): ArrayList<T>{
+    val result = arrayListOf<T>()
+    for (item in this){
+        if (condition(item)){
+            result.add(item)
+        }
+    }
+
+    return result
+}
+//checks if number is odd or even
+fun isOdd(number: Int): Boolean{
+    if(number % 2 == 0){
+        return false
+    }else{
+        return true
+    }
+}
+fun main(args: Array<String>) {
+    var list = arrayListOf<Int>()
+    for (number in 1..10){
+        list.add(number)
+    }
+    var resultList = list.filterOnCondition { isOdd(it) }
+    println(resultList)
+}
+```
+Where the output is:
+```Kotlin
+[1, 3, 5, 7, 9]
+```
+In this snippet of code, I defined an _isOdd_ function which checks if a number is either odd or even. In the body of the main function, I instantiate an object of arrayList and added the values of 1 to 10. Then, I used the _filterOnCondition_ in conjunction with the _isOdd_ function to filter out even numbers form the array. _Note that the argument _it_ in the _isOdd_ function is just the variable _resultList__
+
+
 
 ## About the tools
 
