@@ -227,6 +227,7 @@ There are other ways of controlling the flow of a program in Kotlin:
 * These are functions that are defined by users themselves.
 
 **Basics**
+
 Here is a sample structure of a function definition:
 ```kotlin
 fun functionName(param1: Type1): returnType{
@@ -236,7 +237,60 @@ fun functionName(param1: Type1): returnType{
 ```
 Whenever we declare a new function, we must start with the keyword _fun_, then it is followed up the function name. Inside the brackets are the arguments of the function (the values it takes as input), where we must explicitly state the its dataype. It is important that the dataype of the input matches the specified datatype in the function declaration or else it would cause a compiletime error. Followed by argument declartion comes the ":", where we specify the datatype returned by the function.
 
+Here is a function that calculates the sum of two numbers:
+```kotlin
+fun main(args: Array<String>) {
+    println(sum(1,2))
+}
+fun sum(num1: Int, num2: Int): Int{
+    //body of function
+    return num1 + num2
+}
+```
+We call the function _sum_ in line 2, inside the main function printing the value:
+```kotlin
+3
+```
 
+**Default Arguments**
+
+In Kotlin, we can specify the default arguments that a function takes as input. Meaning if there are no values passed onto the function call, it used the default values instead.
+
+See this example:
+```kotlin
+fun repeatMessage(message: String = "Sorry, no message", length: Int = 1) {
+    for (i in 1..length) {print(message)}
+}
+
+fun main(args: Array<String>) {
+    repeatMessage()
+}
+```
+Which outputs the value:
+```kotlin
+Sorry, no message
+```
+On the other hand if the first argument was _"Hello World"_ and the second argument was _5_, such as in this example:
+```kotlin
+fun repeatMessage(message: String = "Sorry, no message", length: Int = 1) {
+    for (i in 1..length) {println(message)}
+}
+
+fun main(args: Array<String>) {
+    repeatMessage("Hello World", 5)
+}
+```
+The output would be:
+```kotlin
+Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+```
+_Note that the function didn't specify a _return type_, meaning that the function returns nothing_
+
+**Recursion**
 
 ## About the tools
 
