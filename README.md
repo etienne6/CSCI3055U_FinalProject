@@ -644,11 +644,19 @@ Yes, it is a part of Kotlin's standary library. To reiterate, we can see this in
 ## References
 
 All the information I gathered for this repo, I credit to my sources
+
 [1] https://www.programiz.com/kotlin-programming
+
 [2] https://kotlinlang.org/docs/reference/basic-syntax.html
+
 [3] https://medium.com/@agrawalsuneet/higher-order-functions-in-kotlin-3d633a86f3d7
+
 [4] https://hackernoon.com/how-to-write-your-first-program-in-kotlin-8554cb526158
-[5] https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html -
+
+[5] https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html
+
 [6] https://codelabs.developers.google.com/codelabs/build-your-first-android-app
+
 [7] https://www.brightec.co.uk/ideas/kotlin-here-so-what
+
 [8] https://en.wikipedia.org/wiki/Scope_(computer_science)
