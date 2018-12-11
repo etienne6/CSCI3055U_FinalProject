@@ -380,10 +380,28 @@ Now, there's quite a bit going on in this block of code, so let us break it down
 
 2. _getName()_ and _getAge()_ are accessor functions which gets the value of name and age variables of the class.
 
-3. Line 2 of the function is the declaration of instance of the class Person, assigned to the variable person1.
+3. _Line 2_ of the function is the declaration of instance of the class Person, assigned to the variable person1.
 
-4. Line 3 is an example of doing function calls that belong to a class.
+4. _Line 3_ is an example of doing function calls that belong to a class.
 
+**Lambda Expressions and Anonymous functions**
+
+Lambda expressions and anonymous functions are 'function literals', i.e. functions that are not declared, but passed immediately as an expression.
+
+A full syntatic sample of a lambda expresion in Kotlin is like this:
+```kotlin
+val multiply = { x: Int, y: Int -> x * y }
+//function call
+println(multiply(1,2))
+//2
+```
+Lambda expressions in Kotlin always have to be enclosed in curly brackets. The first "arguments" are the parameters that the function will take. Followed by the _->_ is the body of the function.
+
+The use of _anonymous functions_ lets us specify the return type of the functions that we declare. Although this is not required since data types are ineferred. But if we need to do so, here's an example of how:
+```kotlin
+fun(x: Int, y: Int): Int = x * y
+```
+It looks exactly like a regular function but we ommit the name.
 
 ## About the tools
 
