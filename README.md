@@ -150,6 +150,42 @@ Congratulations you have Passed class!
 ```
 Another thing to take note of on if expressions is that, the last line
 of the the executed if/else block is returned.
+
+**while loop**
+Here is the basic syntax of a while loop in Kotlin:
+```kotlin
+while (testExpression) {
+    // codes inside body of while loop
+}
+```
+Where _testExpression_ is a boolean expression. The _testExpression_ gets checked every iteration, if the evaluation is _false_ then the block doesn't get executed. Otherwise, the block gets executed.
+
+Here's an example:
+```kotlin
+  var num_beers = 99
+    while (num_beers > 0) {
+        println( "$num_beers bottles of beer on the wall, $num_beers bottles of beer")
+        --num_beers
+        print("Take one down and pass it around, $num_beers bottles of beer on the wall." + '\n')
+    }
+```
+Where the output is:
+```kotlin
+99 bottles of beer on the wall, 99 bottles of beer
+Take one down and pass it around 98 bottles of beer on the wall.
+98 bottles of beer on the wall, 98 bottles of beer
+Take one down and pass it around 97 bottles of beer on the wall.
+97 bottles of beer on the wall, 97 bottles of beer
+.
+.
+.
+1 bottles of beer on the wall, 1 bottles of beer
+Take one down and pass it around 0 bottles of beer on the wall.
+```
+
+**for loop**
+
+
 ## About the tools
 
 > _Describe the compiler or interpreter needed_.
