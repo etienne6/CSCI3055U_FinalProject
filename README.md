@@ -186,6 +186,57 @@ Take one down and pass it around 0 bottles of beer on the wall.
 
 **for loop**
 
+The _for_ loop in Kotlin is used to iterate over ranges, arrays or any collection that provides an iterator.
+
+Here's a sample structure of a for loop block:
+
+```kotlin
+for (item in collection) {
+    // body of loop
+}
+```
+Where item is the current object in the iteration.
+
+Here's another example where we iterte over a range of numbers:
+```kotlin
+for (number in 1..5) {
+    println(number)
+}
+```
+Where the output would be:
+```kotlin
+1
+2
+3
+4
+5
+```
+
+**Others**
+
+There are other ways of controlling the flow of a program in Kotlin:
+1. _when_
+2. _break_
+3. _continue_
+
+### Functions
+**Function Types**
+1. _Kotlin Standard Library_
+* These are built in functions that are ready for use. This will be discussed later under the _About the standard library_ section of this document
+2. _User defined_
+* These are functions that are defined by users themselves.
+
+**Basics**
+Here is a sample structure of a function definition:
+```kotlin
+fun functionName(param1: Type1): returnType{
+    //body of function
+    return returnType
+}
+```
+Whenever we declare a new function, we must start with the keyword _fun_, then it is followed up the function name. Inside the brackets are the arguments of the function (the values it takes as input), where we must explicitly state the its dataype. It is important that the dataype of the input matches the specified datatype in the function declaration or else it would cause a compiletime error. Followed by argument declartion comes the ":", where we specify the datatype returned by the function.
+
+
 
 ## About the tools
 
